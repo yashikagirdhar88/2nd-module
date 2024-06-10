@@ -1,12 +1,10 @@
-# Starter Next/Hardhat Project
+The Assessment smart contract is a program written in Solidity that allows the owner to manage money. The contract has two main functions: depositing and withdrawing money. The owner is the only person who can perform these actions. When the contract is created the owner and an initial balance are set. The contract keeps track of the balance which is the amount of money it holds. There are two events: Deposit and Withdraw which are triggered whenever money is added or taken out. To add money the owner uses the deposit function which increases the balance and records the event. To take out money the owner uses the withdraw function which checks if there is enough money decreases the balance if possible and records the event. If there isn't enough money to withdraw an error called InsufficientBalance is shown. The getBalance function allows anyone to see the current balance without changing it. This contract ensures that only the owner can add or take out money and provides clear feedback when these actions occur.
+This code is for a web page that lets you interact with a smart contract on the Ethereum blockchain. The smart contract acts like an ATM, where you can deposit and withdraw money using your MetaMask wallet.
 
-After cloning the github, you will want to do the following to get the code running on your computer.
+First, the code checks if you have MetaMask installed. If you do, it connects to your wallet and lets you access your account. Once your account is connected, you can see your balance in the smart contract. 
 
-1. Inside the project directory, in the terminal type: npm i
-2. Open two additional terminals in your VS code
-3. In the second terminal type: npx hardhat node
-4. In the third terminal, type: npx hardhat run --network localhost scripts/deploy.js
-5. Back in the first terminal, type npm run dev to launch the front-end.
+There are two main actions you can do: deposit and withdraw. When you click the "Deposit 1 ETH" button, it adds 1 ETH (Ethereum) to the contract balance. When you click the "Withdraw 1 ETH" button, it takes 1 ETH out of the contract balance. 
 
-After this, the project will be running on your localhost. 
-Typically at http://localhost:3000/
+The page updates to show your current balance and confirms your actions with the smart contract. This way, you can easily manage your Ethereum funds directly from your web browser.
+
+To summarize, this code helps you connect your MetaMask wallet to a smart contract, see your balance, and deposit or withdraw money with simple button clicks.
